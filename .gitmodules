@@ -4,3 +4,6 @@
 [submodule "picotool"]
 	path = picotool
 	url = git@github.com:raspberrypi/picotool.git
+[submodule "VL53L1X-C-API-for-Raspberry-Pi-Pico"]
+	path = VL53L1X-C-API-for-Raspberry-Pi-Pico
+	url = git@github.com:alex-mous/VL53L1X-C-API-for-Raspberry-Pi-Pico.git

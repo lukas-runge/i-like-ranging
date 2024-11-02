@@ -5,6 +5,8 @@ set(PICO_PLATFORM rp2350)
 # note: this must happen before project()
 include(pico-sdk/pico_sdk_init.cmake)
 
+include(VL53L1X-C-API-for-Raspberry-Pi-Pico/library/import.cmake)
+
 project(i_like_ranging)
 
 set(PICO_CXX_ENABLE_EXCEPTIONS 1)
@@ -26,6 +28,8 @@ if (TARGET tinyusb_device)
     target_link_libraries(${PROJECT_NAME}
         pico_stdlib
         pico_multicore
+        hardware_i2c
+        VL53L1X_pico_api
     )
 
     # enable usb output, disable uart output
